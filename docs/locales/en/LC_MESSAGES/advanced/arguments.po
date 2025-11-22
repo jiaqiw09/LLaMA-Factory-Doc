@@ -1408,16 +1408,42 @@ msgid "用于评估的数据集名称。使用逗号分隔多个数据集。"
 msgstr "Name of dataset(s) for evaluation. Use commas to separate multiple datasets."
 
 #: ../../source/advanced/arguments.rst:406 231f08bfaf0a4e138f72cc949f1b1a8a
-msgid "dataset_dir"
-msgstr "dataset_dir"
-
-#: ../../source/advanced/arguments.rst:408 6e915de1324b4167af8116b2739b02c1
-msgid "存储数据集的文件夹路径。"
-msgstr "Folder path where datasets are stored."
-
-#: ../../source/advanced/arguments.rst:409 dd7fd429c8e74fdab1cc645fa20a9628
-msgid "\"data\""
-msgstr "\"data\""
+msgid ""
+"存储数据集的文件夹路径，可以是字符串或字典。\n"
+"类型：``str`` 或 ``dict``（需符合 `dataset_info.json <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dataset_info.json>`_ 的格式）。\n"
+"\n"
+"**当为字符串时：**\n"
+"表示数据集目录的路径，例如：\n"
+"`data <https://github.com/hiyouga/LLaMA-Factory/tree/main/data>`_ 。\n"
+"\n"
+"**当为字典时：**\n"
+"将覆盖默认从本地 `dataset_info.json <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dataset_info.json>`_ 加载的行为。其格式如下：\n"
+"\n"
+".. code-block:: json\n"
+"\n"
+"   {\n"
+"     \"dataset_name\": {\n"
+"       \"file_name\": \"your_file_name\"\n"
+"     }\n"
+"   }\n"
+msgstr ""
+"The folder path where datasets are stored. It can be either a string or a dictionary.\n"
+"Type: ``str`` or ``dict`` (must follow the format of `dataset_info.json <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dataset_info.json>`_).\n"
+"\n"
+"**When it is a string:**\n"
+"It represents the path to the dataset directory, for example:\n"
+"`data <https://github.com/hiyouga/LLaMA-Factory/tree/main/data>`_.\n"
+"\n"
+"**When it is a dictionary:**\n"
+"It overrides the default behavior of loading from the local `dataset_info.json <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dataset_info.json>`_. The expected format is:\n"
+"\n"
+".. code-block:: json\n"
+"\n"
+"   {\n"
+"     \"dataset_name\": {\n"
+"       \"file_name\": \"your_file_name\"\n"
+"     }\n"
+"   }\n"
 
 #: ../../source/advanced/arguments.rst:410 2acd56ebb48b4d9ebf4e23c5ee547c8a
 msgid "media_dir"
@@ -2604,3 +2630,138 @@ msgstr "Resource scheduling strategy for Ray training. Available values include 
 msgid "PACK"
 msgstr "PACK"
 
+
+msgid "环境变量"
+msgstr "Environment Variables"
+
+msgid "Environment Variables"
+msgstr "Environment Variables"
+
+msgid "名称"
+msgstr "Name"
+
+msgid "类型"
+msgstr "Type"
+
+msgid "介绍"
+msgstr "Description"
+
+msgid "API"
+msgstr "API"
+
+msgid "API 服务器监听的主机地址"
+msgstr "The host address the API server listens on"
+
+msgid "API 服务器监听的端口号"
+msgstr "The port number the API server listens on"
+
+msgid "访问 API 的密码。"
+msgstr "The password for accessing the API."
+
+msgid "指定 API 服务要加载和使用的模型名称"
+msgstr "Specifies the model name to be loaded and used by the API service"
+
+msgid "控制 API 日志的详细程度"
+msgstr "Controls the verbosity level of API logs"
+
+msgid "设置 FastAPI 应用的根路径"
+msgstr "Sets the root path for the FastAPI application"
+
+msgid "API 的最大并发请求数。"
+msgstr "The maximum number of concurrent requests for the API."
+
+msgid "General"
+msgstr "General"
+
+msgid "是否禁用启动时的版本检查。"
+msgstr "Whether to disable version check on startup."
+
+msgid "强制检查可选的导入"
+msgstr "Forces checking of optional imports"
+
+msgid "允许在命令行中传递额外参数"
+msgstr "Allows passing extra arguments in the command line"
+
+msgid "设置 LLaMA-Factory 的日志级别(\"DEBUG\",\"INFO\",\"WARN\")"
+msgstr "Sets the log level of LLaMA-Factory (\"DEBUG\", \"INFO\", \"WARN\")"
+
+msgid "优先使用 ModelScope 下载模型/数据集或使用缓存路径中的模型/数据集"
+msgstr "Prioritizes using ModelScope to download models/datasets or uses them from the cache path"
+
+msgid "优先使用 Openmind 下载模型/数据集或使用缓存路径中的模型/数据集"
+msgstr "Prioritizes using Openmind to download models/datasets or uses them from the cache path"
+
+msgid "是否使用 Ray 进行分布式执行或任务管理。"
+msgstr "Whether to use Ray for distributed execution or task management."
+
+msgid "是否记录 VRAM 使用情况。"
+msgstr "Whether to record VRAM usage."
+
+msgid "是否表示启用特定的 PyTorch 优化。"
+msgstr "Whether to enable specific PyTorch optimizations."
+
+msgid "是否为 NPU启用 JIT 编译。"
+msgstr "Whether to enable JIT compilation for NPU."
+
+msgid "GPU 选择。"
+msgstr "GPU selection."
+
+msgid "NPU 选择。"
+msgstr "NPU selection."
+
+msgid "Torchrun"
+msgstr "Torchrun"
+
+msgid "是否强制使用 ``torchrun`` 启动脚本"
+msgstr "Whether to force using ``torchrun`` to start the script"
+
+msgid "Torchrun部署中主节点 (master node) 的网络地址"
+msgstr "The network address of the master node in Torchrun deployment"
+
+msgid "Torchrun部署中主节点用于通信的端口号"
+msgstr "The port number used for communication by the master node in Torchrun deployment"
+
+msgid "参与分布式部署的总节点数量"
+msgstr "The total number of nodes participating in the distributed deployment"
+
+msgid "当前节点在所有节点中的 rank，通常从 0 到 ``NNODES-1``。"
+msgstr "The rank of the current node among all nodes, typically from 0 to ``NNODES-1``."
+
+msgid "每个节点上的 GPU 数"
+msgstr "The number of GPUs per node"
+
+msgid "Log"
+msgstr "Log"
+
+msgid "是否禁用 wandb"
+msgstr "Whether to disable wandb"
+
+msgid "设置 wandb 中的项目名称。"
+msgstr "Sets the project name in wandb."
+
+msgid "访问 wandb 的 api key"
+msgstr "The API key for accessing wandb"
+
+msgid "Web UI"
+msgstr "Web UI"
+
+msgid "是否创建一个可共享的 webui 链接"
+msgstr "Whether to create a shareable Web UI link"
+
+msgid "设置 Gradio 服务器 IP 地址（例如 ``0.0.0.0``）"
+msgstr "Sets the Gradio server IP address (e.g., ``0.0.0.0``)"
+
+msgid "设置 Gradio 服务器的端口"
+msgstr "Sets the Gradio server port"
+
+msgid "设置 Gradio 应用的根路径"
+msgstr "Sets the root path for the Gradio application"
+
+msgid "启用 Gradio 服务器的 IPv6 支持"
+msgstr "Enables IPv6 support for the Gradio server"
+
+msgid "Setting"
+msgstr "Setting"
+
+msgid "支持使用 ``lmf`` 表示 ``llamafactory-cli``"
+msgstr "Supports using ``lmf`` as an alias for ``llamafactory-cli``"

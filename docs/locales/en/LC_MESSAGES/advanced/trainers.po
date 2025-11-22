@@ -118,15 +118,9 @@ msgstr "PPO"
 
 #: ../../source/advanced/trainers.rst:114 7aa15131391a4e87a24f2139345a7b6a
 msgid ""
-"在训练奖励完模型之后，我们可以开始进行模型的强化学习部分。与监督学习不同，在强化学习中我们没有标注好的数据。语言模型接受prompt作为输入，其输出作为奖励模型的输入。奖励模型评价语言模型的输出，并将评价返回给语言模型。确保两个模型都能良好运行是一个具有挑战性的任务。"
-" 一种实现方式是使用近端策略优化（PPO，Proximal Policy "
-"Optimization）。其主要思想是：我们既希望语言模型的输出能够尽可能地获得奖励模型的高评价，又不希望语言模型的变化过于"激进"。 "
-"通过这种方法，我们可以使得模型在学习趋近人类偏好的同时不过多地丢失其原有的解决问题的能力。"
+"在训练奖励完模型之后，我们可以开始进行模型的强化学习部分。与监督学习不同，在强化学习中我们没有标注好的数据。语言模型接受prompt作为输入，其输出作为奖励模型的输入。奖励模型评价语言模型的输出，并将评价返回给语言模型。确保两个模型都能良好运行是一个具有挑战性的任务。 一种实现方式是使用近端策略优化（PPO，Proximal Policy Optimization）。其主要思想是：我们既希望语言模型的输出能够尽可能地获得奖励模型的高评价，又不希望语言模型的变化过于“激进”。 通过这种方法，我们可以使得模型在学习趋近人类偏好的同时不过多地丢失其原有的解决问题的能力。"
 msgstr ""
-"After training the reward model, we can start the reinforcement learning part of the model. Unlike supervised learning, in reinforcement learning we don't have labeled data. The language model accepts prompts as input, and its output serves as input to the reward model. The reward model evaluates the language model's output and returns the evaluation to the language model. Ensuring both models run well is a challenging task. "
-"One implementation approach is to use Proximal Policy Optimization (PPO). "
-"The main idea is: we want the language model's output to receive high ratings from the reward model as much as possible, while not wanting the language model's changes to be too \"aggressive\". "
-"Through this method, we can enable the model to learn to approach human preferences while not losing too much of its original problem-solving ability."
+"After training the reward model, we can start the reinforcement learning phase of the model. Unlike supervised learning, reinforcement learning does not have labeled data. The language model takes prompts as input, and its output serves as input to the reward model. The reward model evaluates the language model's output and returns the evaluation to the language model. Ensuring that both models run smoothly is a challenging task. One way to implement this is by using Proximal Policy Optimization (PPO). The main idea is that we want the language model's output to receive as high ratings as possible from the reward model, while avoiding overly 'aggressive' changes to the language model. This approach allows the model to learn to align with human preferences without losing too much of its original problem-solving ability."
 
 #: ../../source/advanced/trainers.rst:118 a77aecbe227441bf8f5bad687719a085
 msgid "在使用 PPO 进行强化学习时，请将 ``stage`` 设置为 ``ppo``，并且指定所使用奖励模型的路径。 下面是一个示例："
@@ -138,11 +132,9 @@ msgstr "DPO"
 
 #: ../../source/advanced/trainers.rst:133 75741a597bc44dada4242e6602e14955
 msgid ""
-"既然同时保证两个语言模型与奖励模型的良好运行是有挑战性的，一种想法是我们可以丢弃奖励模型， "
-"进而直接基于人类偏好训练我们的语言模型，这大大简化了训练过程。"
+"既然同时保证语言模型与奖励模型的良好运行是有挑战性的，一种想法是我们可以丢弃奖励模型，进而直接基于人类偏好训练我们的语言模型，这大大简化了训练过程。"
 msgstr ""
-"Since ensuring the good operation of both the language model and reward model simultaneously is challenging, one idea is that we can discard the reward model "
-"and train our language model directly based on human preferences, which greatly simplifies the training process."
+"Since ensuring the good operation of both the language model and reward model simultaneously is challenging, one idea is that we can discard the reward model and train our language model directly based on human preferences, which greatly simplifies the training process."
 
 #: ../../source/advanced/trainers.rst:136 345ea649ad2240a08f20359eeac336d7
 msgid ""

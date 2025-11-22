@@ -28,9 +28,17 @@ msgstr "Supervised Fine-tuning"
 msgid "命令行"
 msgstr "Command Line"
 
-#: ../../source/getting_started/sft.rst:11 f7ea582168584ca68885119694a00371
-msgid "您可以使用以下命令进行微调："
-msgstr "You can use the following command for fine-tuning:"
+#: ../../source/getting_started/train.rst:10
+msgid "您可以使用以下命令使用 ``examples/train_lora/llama3_lora_sft.yaml`` 中的参数进行微调："
+msgstr "You can fine-tune using the parameters in ``examples/train_lora/llama3_lora_sft.yaml`` with the following command:"
+
+#: ../../source/getting_started/train.rst:14
+msgid "也可以通过追加参数更新 yaml 文件中的参数:"
+msgstr "You can also update the YAML parameters by appending them:"
+
+#: ../../source/getting_started/train.rst:18
+msgid "LLaMA-Factory 默认使用所有可见的计算设备。根据需求可通过 ``CUDA_VISIBLE_DEVICES`` 或 ``ASCEND_RT_VISIBLE_DEVICES`` 指定计算设备。"
+msgstr "By default, LLaMA-Factory uses all visible computing devices. You can specify which devices to use via ``CUDA_VISIBLE_DEVICES`` or ``ASCEND_RT_VISIBLE_DEVICES`` if needed."
 
 #: ../../source/getting_started/sft.rst:19 9bb225e0f4024c1d836eadba17cfa492
 msgid ""
@@ -41,7 +49,7 @@ msgstr ""
 "provides a configuration example for fine-tuning. This configuration specifies model parameters, fine-tuning method parameters, dataset parameters, evaluation parameters, etc. You need to configure them according to your own needs."
 
 #: ../../source/getting_started/sft.rst:60 f6a9f7b242024cee97999596f7fd6454
-msgid "模型 ``model_name_or_path`` 、数据集 ``dateset`` 需要存在且与 ``template`` 相对应。"
+msgid "模型 ``model_name_or_path`` 、数据集 ``dataset`` 需要存在且与 ``template`` 相对应。"
 msgstr "The model ``model_name_or_path`` and dataset ``dataset`` must exist and correspond to the ``template``."
 
 #: ../../source/getting_started/sft.rst:63 f40947ed0ef747568ab343a7b29bc3f6
