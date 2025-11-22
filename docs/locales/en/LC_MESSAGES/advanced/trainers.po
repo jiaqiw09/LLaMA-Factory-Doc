@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../../source/advanced/trainers.rst:12 f1ac2aa20f4748d29819677cce0981fd
 msgid "预训练时，请将 ``stage`` 设置为 ``pt`` ，并确保使用的数据集符合 :ref:`预训练数据集` 格式 。"
-msgstr "When pre-training, please set ``stage`` to ``pt`` and ensure the dataset used conforms to the :ref:`Pre-training Dataset` format."
+msgstr "When pre-training, please set ``stage`` to ``pt`` and ensure the dataset used conforms to the :ref:`预训练数据集` format."
 
 #: ../../source/advanced/trainers.rst:14 498289062bf143b4a8334385ddba8cab
 msgid "下面提供预训练的配置示例："
