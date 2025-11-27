@@ -1405,43 +1405,22 @@ msgstr "eval_dataset"
 msgid "用于评估的数据集名称。使用逗号分隔多个数据集。"
 msgstr "Name of dataset(s) for evaluation. Use commas to separate multiple datasets."
 
+#: ../../source/advanced/arguments.rst:402 12306f15bcbf4e10b78e47659454d0a2
+msgid "eval_on_each_dataset"
+msgstr "eval_on_each_dataset"
+
+#: ../../source/advanced/arguments.rst:404 b3a9fc46e64f46119ca9aff53bde9e71
+msgid "是否在每个评估数据集上分开计算loss，默认concate后为整体计算。"
+msgstr "Whether to calculate the loss separately on each evaluation dataset; by default, the losses are concatenated and computed as a whole."
+
+msgid "dataset_dir"
+msgstr "dataset_dir"
+
 #: ../../source/advanced/arguments.rst:406 231f08bfaf0a4e138f72cc949f1b1a8a
 msgid ""
-"存储数据集的文件夹路径，可以是字符串或字典。\n"
-"类型：``str`` 或 ``dict``（需符合 `dataset_info.json <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dataset_info.json>`_ 的格式）。\n"
-"\n"
-"**当为字符串时：**\n"
-"表示数据集目录的路径，例如：\n"
-"`data <https://github.com/hiyouga/LLaMA-Factory/tree/main/data>`_ 。\n"
-"\n"
-"**当为字典时：**\n"
-"将覆盖默认从本地 `dataset_info.json <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dataset_info.json>`_ 加载的行为。其格式如下：\n"
-"\n"
-".. code-block:: json\n"
-"\n"
-"   {\n"
-"     \"dataset_name\": {\n"
-"       \"file_name\": \"your_file_name\"\n"
-"     }\n"
-"   }\n"
+"存储数据集的文件夹路径，可以是字符串或字典。当为字符串时，表示数据集目录的路径，例如 `data <https://github.com/hiyouga/LLaMA-Factory/tree/main/data>`_ ；当为字典时，将覆盖默认从本地 `dataset_info.json <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dataset_info.json>`_ 加载的行为。"
 msgstr ""
-"The folder path where datasets are stored. It can be either a string or a dictionary.\n"
-"Type: ``str`` or ``dict`` (must follow the format of `dataset_info.json <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dataset_info.json>`_).\n"
-"\n"
-"**When it is a string:**\n"
-"It represents the path to the dataset directory, for example:\n"
-"`data <https://github.com/hiyouga/LLaMA-Factory/tree/main/data>`_.\n"
-"\n"
-"**When it is a dictionary:**\n"
-"It overrides the default behavior of loading from the local `dataset_info.json <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dataset_info.json>`_. The expected format is:\n"
-"\n"
-".. code-block:: json\n"
-"\n"
-"   {\n"
-"     \"dataset_name\": {\n"
-"       \"file_name\": \"your_file_name\"\n"
-"     }\n"
-"   }\n"
+"The path to the folder storing the dataset, which can be a string or a dictionary. If a string, it represents the dataset directory path, for example `data <https://github.com/hiyouga/LLaMA-Factory/tree/main/data>`_ ; if a dictionary, it overrides the default behavior of loading from the local `dataset_info.json <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dataset_info.json>`_."
 
 #: ../../source/advanced/arguments.rst:410 2acd56ebb48b4d9ebf4e23c5ee547c8a
 msgid "media_dir"
@@ -1450,6 +1429,14 @@ msgstr "media_dir"
 #: ../../source/advanced/arguments.rst:412 74782e5b8c8e430fb68d1f2f6705fdab
 msgid "存储图像、视频或音频的文件夹路径。如果未指定，默认为 dataset_dir。"
 msgstr "Folder path where images, videos, or audio are stored. If not specified, defaults to dataset_dir."
+
+#: ../../source/advanced/arguments.rst:412 74782e5b8c8e430fb68d1f2f6705fdab
+msgid "data_shared_file_system"
+msgstr "data_shared_file_system“
+
+msgid "多机多卡时，不同机器存放数据集的路径是否是共享文件系统。数据集处理在该值为true时只在第一个node发生，为false时在每个node都处理一次。"
+msgstr "When using multiple nodes and multiple cards, whether the dataset paths on different machines are on a shared file system. If set to true, dataset processing only occurs on the first node; if false, processing is performed on each node."
+
 
 #: ../../source/advanced/arguments.rst:414 626a15d6523947c28284cda055cb9b3b
 msgid "cutoff_len"

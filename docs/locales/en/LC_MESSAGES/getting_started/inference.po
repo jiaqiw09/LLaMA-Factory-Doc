@@ -48,7 +48,7 @@ msgid ""
 "推理引擎对大量数据集进行快速的批量推理。您也可以通过 :ref:`部署 api <api>` 服务的形式通过 api 调用来进行批量推理。"
 msgstr ""
 "If you want to input a large dataset to the model and save the inference results, you can start the :ref:`vllm <vllm>` "
-"inference engine for fast batch inference on large datasets. You can also perform batch inference through API calls by :ref:`deploying an api <api>` service."
+"inference engine for fast batch inference on large datasets. You can also perform batch inference through API calls by :ref:`api deploying <api>` service."
 
 #: ../../source/getting_started/inference.rst:10
 #: ff76711b7d274958ade05c7003beb6dc

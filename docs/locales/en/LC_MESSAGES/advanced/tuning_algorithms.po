@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../source/advanced/adapters.rst:4 4f81154f5df146e892b2c66db469770b
 msgid "调优算法"
-msgstr "Adapters"
+msgstr "Tuning algorithms"
 
 #: ../../source/advanced/adapters.rst:6 dbdce8a639e94307af3ff627763ab812
 msgid ""
@@ -380,7 +380,7 @@ msgid "不要将 LoRA 和 GaLore/BAdam 一起使用。"
 msgstr "Do not use LoRA together with GaLore/BAdam."
 
 #: ../../source/advanced/adapters.rst:199 de0aa7e22b5841039a213f2b9168a267
-msgid "``galore_layerwise`` 为 ``true`` 时请不要设置 ``gradient_accumulation`` 参数"
+msgid "``galore_layerwise`` 为 ``true`` 时请不要设置 ``gradient_accumulation`` 参数。"
 msgstr "When ``galore_layerwise`` is ``true``, please do not set the ``gradient_accumulation`` parameter."
 
 #: ../../source/advanced/adapters.rst:201 047453dd5490412299951eb23d9b95db

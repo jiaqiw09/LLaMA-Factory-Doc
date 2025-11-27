@@ -5,7 +5,7 @@
 
 LLaMA-Factory 允许用户添加自定义模型支持。我们将以 LLaMA-4 多模态模型为例，详细介绍如何为新模型添加支持。对于多模态模型，我们需要完成两个主要任务：
 
-1. 注册模型的 template
+1. 注册模型的template
 2. 解析多模态数据并构建 messages
 
 .. https://huggingface.co/unsloth/Llama-4-Scout-17B-16E-Instruct/blob/main/tokenizer_config.json#L9077
@@ -81,25 +81,25 @@ LLaMA-Factory 允许用户添加自定义模型支持。我们将以 LLaMA-4 多
 .. raw:: html
 
     <pre><code class="python" style="font-family: monospace; font-size: 14px; background-color: #fefefe; color: #000000; padding: 5px; border-radius: 0px;">register_template(
-        # 模板名称
+        # Template
         name="llama4", 
-        # 用户消息格式，结尾附有 generation prompt 的模板
+        # User Message Format, with a generation prompt template at the end
         format_user=StringFormatter(
             slots=["<span style='background-color: #fff9b1;'>&lt;|header_start|&gt;user&lt;|header_end|&gt;\n\n{{content}}&lt;|eot|&gt;</span><span style='background-color: #ffff66;'>&lt;|header_start|&gt;assistant&lt;|header_end|&gt;\n\n</span>"]
         ),
-        # 助手消息格式
+        # Assistant Message format
         <span style='background-color: #ffff66;'>format_assistant</span>=StringFormatter(slots=["<span style='background-color: #ffff66;'>{{content}}&lt;|eot|&gt;</span>"]),
-        # 系统消息格式
+        # System Message Format
         format_system=StringFormatter(slots=["<span style="background-color: #d6f0ff;">&lt;|header_start|&gt;system&lt;|header_end|&gt;\n\n{{content}}&lt;|eot|&gt;</span>"]),
-        # 函数调用格式
+        # Function Call Format
         format_function=FunctionFormatter(slots=["{{content}}&lt;|eot|&gt;"], tool_format="llama3"),
-        # 工具输出格式，结尾附有 generation prompt 的模板
+        # Tool Output Format, with a generation prompt template at the end
         format_observation=StringFormatter(
             slots=[
                 "<span style='background-color: #f1e6ff;'>&lt;|header_start|&gt;ipython&lt;|header_end|&gt;\n\n{{content}}&lt;|eot|&gt;</span><span style='background-color: #ffff66;'>&lt;|header_start|&gt;assistant&lt;|header_end|&gt;</span>\n\n"
             ]
         ),
-        # 工具调用格式
+        # Tool Call Format
         format_tools=ToolFormatter(tool_format="llama3"),
         format_prefix=EmptyFormatter(slots=[{"bos_token"}]),
         stop_words=["&lt;|eot|&gt;", "&lt;|eom|&gt;"],
@@ -135,7 +135,7 @@ LLaMA-Factory 允许用户添加自定义模型支持。我们将以 LLaMA-4 多
 
     .. code-block:: python
         
-        # 已有实现：https://github.com/hiyouga/LLaMA-Factory/blob/da971c37640de20f97b4d774e77e6f8d5c00b40a/src/llamafactory/data/mm_plugin.py#L264
+        # https://github.com/hiyouga/LLaMA-Factory/blob/da971c37640de20f97b4d774e77e6f8d5c00b40a/src/llamafactory/data/mm_plugin.py#L264
         def _get_mm_inputs(
             self,
             images: list["ImageInput"],

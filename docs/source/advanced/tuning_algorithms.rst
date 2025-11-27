@@ -22,7 +22,7 @@ Full Parameter Fine-tuning
     # ...
     finetuning_type: full
     # ...
-    # 如果需要使用deepspeed:
+    #deepspeed:
     deepspeed: examples/deepspeed/ds_z3_config.json
 
 .. _freeze:

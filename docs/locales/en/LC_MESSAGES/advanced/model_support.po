@@ -27,12 +27,12 @@ msgid "LLaMA-Factory 允许用户添加自定义模型支持。我们将以 LLaM
 msgstr "LLaMA-Factory allows users to add support for custom models. We will take the LLaMA-4 multimodal model as an example to introduce how to add support for a new model. For multimodal models, we need to complete two main tasks:"
 
 #: model_support.rst
-msgid "1. 注册模型的 template"
-msgstr "1. Register the model's template"
+msgid "注册模型的template"
+msgstr "Register the model's template"
 
 #: model_support.rst
-msgid "2. 解析多模态数据并构建 messages"
-msgstr "2. Parse multimodal data and construct messages"
+msgid "解析多模态数据并构建 messages"
+msgstr "Parse multimodal data and construct messages"
 
 #: model_support.rst
 msgid "注册 template"
@@ -70,9 +70,6 @@ msgstr "``<|header_start|>user<|header_end|>\\n\\n{{content}}<|eot|>``"
 msgid "助手消息"
 msgstr "Assistant message"
 
-#: model_support.rst
-msgid "``<|header_start|>assistant<|header_end|>\\n\\n{{content}}<|eot|>``"
-msgstr "``<|header_start|>assistant<|header_end|>\\n\\n{{content}}<|eot|>``"
 
 #: model_support.rst
 msgid "系统消息"

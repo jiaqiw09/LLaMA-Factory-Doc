@@ -21,7 +21,7 @@ msgstr ""
 #: ../../source/getting_started/merge_lora.rst:2
 #: b5577aab55b64c7ab5b88a4aebd7d12d
 msgid "LoRA 合并"
-msgstr "Merge"
+msgstr "LoRA Merge"
 
 #: ../../source/getting_started/merge_lora.rst:5
 #: 47db7e8b42e9454a869f6be40965bc36
@@ -34,8 +34,7 @@ msgid ""
 "当我们基于预训练模型训练好 LoRA 适配器后，我们不希望在每次推理的时候分别加载预训练模型和 LoRA 适配器，因此我们需要将预训练模型和 "
 "LoRA 适配器合并导出成一个模型，并根据需要选择是否量化。根据是否量化以及量化算法的不同，导出的配置文件也有所区别。"
 msgstr ""
-"After training a LoRA adapter based on a pre-trained model, we don't want to load the pre-trained model and LoRA adapter separately during each inference. Therefore, we need to merge the pre-trained model and "
-"LoRA adapter into a single model and choose whether to quantize as needed. The exported configuration file differs depending on whether quantization is used and which quantization algorithm is selected."
+"After training a LoRA adapter based on a pre-trained model, we don't want to load the pre-trained model and LoRA adapter separately during each inference. Therefore, we need to merge and export the pre-trained model and LoRA adapter into a merged model and choose whether to quantize as needed. The exported configuration file differs depending on whether quantization is used and which quantization algorithm is selected."
 
 #: ../../source/getting_started/merge_lora.rst:9
 #: 2fea33c0477948da90ba148c1dd662af
@@ -58,7 +57,7 @@ msgid ""
 "``adapter_name_or_path`` 需要与微调中的适配器输出路径 ``output_dir`` 相对应。"
 msgstr ""
 "The model ``model_name_or_path`` must exist and correspond to the ``template``. "
-"``adapter_name_or_path`` must correspond to the adapter output path ``output_dir`` from fine-tuning."
+"And ``adapter_name_or_path`` must correspond to the adapter output path ``output_dir`` used during fine-tuning."
 
 #: ../../source/getting_started/merge_lora.rst:31
 #: 55370c34341b4999903f981be9aa2d6c

@@ -61,13 +61,9 @@ msgstr "Check if ``gcc`` is installed. Enter ``gcc --version`` in the command li
 #: ../../source/getting_started/installation.rst:35
 #: 182650a91a874372ae25417e430053c4
 msgid ""
-"在以下网址下载所需的 CUDA，这里推荐12.2版本。 `https://developer.nvidia.com/cuda-gpus "
-"<https://developer.nvidia.com/cuda-12-2-0-download-archive/>`_ "
-"注意需要根据上述输出选择正确版本"
+"在以下网址（`https://developer.nvidia.com/cuda-gpus <https://developer.nvidia.com/cuda-12-2-0-download-archive/>`__）下载所需的 CUDA，这里推荐12.2版本，注意需要根据上述输出选择正确版本。"
 msgstr ""
-"Download the required CUDA from the following link, version 12.2 is recommended. `https://developer.nvidia.com/cuda-gpus "
-"<https://developer.nvidia.com/cuda-12-2-0-download-archive/>`_ "
-"Note: select the correct version according to the above output"
+"Download the required CUDA from the following link(`https://developer.nvidia.com/cuda-gpus <https://developer.nvidia.com/cuda-12-2-0-download-archive/>`__), version 12.2 is recommended，please select the correct version according to the above output."
 
 #: ../../source/getting_started/installation.rst:39
 #: 9ab7f38cb1244db483aa112216af94fc
