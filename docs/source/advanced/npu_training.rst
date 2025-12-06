@@ -9,7 +9,7 @@ NPU训练
 LLaMA-Factory 当前已适配以下昇腾 NPU 设备：
 
 - **Atlas A2 训练系列**
-- **Atlas 800I A2 推理系列**
+- **Atlas A3 训练系列**
 
 
 支持功能
