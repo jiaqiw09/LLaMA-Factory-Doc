@@ -713,6 +713,7 @@ accelerate
 当然您也可以根据需求自行配置 fsdp_config.yaml 。
 
 .. code-block:: yaml
+
     #examples/accelerate/fsdp_config_multiple_nodes.yaml
     compute_environment: LOCAL_MACHINE
     debug: false
@@ -767,6 +768,7 @@ FSDP2
 当前LLamafactory基于Accelerate集成使用FSDP2的分布式训练，与FSDP的差异主要在于参数配置的不同。您可以采用FSDP相同的方式运行单机多卡和多机多卡。我们也为您提供了通用的入参配置：
 
 .. code-block:: shell
+
     #examples/accelerate/fsdp2_config.yaml
     compute_environment: LOCAL_MACHINE
     debug: false
